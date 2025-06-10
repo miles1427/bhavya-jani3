@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OUR STORY</title>
+  <style>
+    /* Reset and base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: transparent;
+      position: relative;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Background container for sun and birds - full screen */
+    #background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none; /* so you can click links */
+      z-index: -1;
+    }
+
+    /* Sun rising from bottom center */
+    .sun {
+      position: absolute;
+      bottom: -120px; /* start below screen */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+      height: 140px;
+      background: radial-gradient(circle at center, #fff176, #fbc02d 60%, #f57f17 90%);
+      border-radius: 50%;
+      box-shadow: 0 0 80px 40px rgba(255, 241, 118, 0.7);
+      animation: riseSun 6s ease forwards;
+      z-index: 10;
+    }
+
+    @keyframes riseSun {
+      from {
+        bottom: -120px;
+        opacity: 0;
+      }
+      to {
+        bottom: 150px; /* moved sun higher */
+        opacity: 1;
+      }
+    }
+
+    /* Birds flying */
+    .bird {
+      position: absolute;
+      width: 50px;
+      height: 40px;
+      fill: none;
+      stroke: white;
+      stroke-width: 2;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-name: flyRight;
+    }
+
+    .bird1 {
+      left: -60px;
+      animation-duration: 15s;
+      animation-delay: 0s;
+      top: 25%;
+    }
+    .bird2 {
+      left: -80px;
+      animation-duration: 12s;
+      animation-delay: 2s;
+      top: 30%;
+    }
+    .bird3 {
+      left: -70px;
+      animation-duration: 18s;
+      animation-delay: 5s;
+      top: 35%;
+    }
+
+    @keyframes flyRight {
+      from {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+      }
+      to {
+        transform: translateX(110vw) scale(1.1);
+        opacity: 0.7;
+      }
+    }
+
+    /* Main content styling */
+    .content {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 70, 0.6); /* darker blue with transparency */
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 20px #000a;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      color: #ffecb3; /* soft warm color */
+      text-shadow: 1px 1px 3px #0009;
+    }
+
+    .lyrics {
+      font-style: italic;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      color: #fff9c4;
+      text-shadow: 1px 1px 4px #000a;
+    }
+
+    .links a {
+      display: block;
+      margin: 12px 0;
+      font-size: 1.3rem;
+      color: #ffe082;
+      text-decoration: none;
+      transition: 0.3s;
+      text-shadow: 0 0 3px #000a;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+      color: #fffde7;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #eee;
+      background: rgba(0, 0, 70, 0.5);
+      padding: 5px;
+      text-shadow: 0 0 4px #000a;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background container -->
+  <div id="background">
+    <div class="sun"></div>
+
+    <!-- Birds as simple white wings -->
+    <svg class="bird bird1" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <path d="M5 30 Q15 10 25 30 T45 30" />
+    </svg>
+    <svg class="bird bird2" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <path d="M5 30 Q15 10 25 30 T45 30" />
+    </svg>
+    <svg class="bird bird3" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <path d="M5 30 Q15 10 25 30 T45 30" />
+    </svg>
+  </div>
+
+  <!-- Page Content -->
+  <div class="content">
+    <h1>OUR STORY</h1>
+    
+    <div class="lyrics">
+      "And I know you heard about me<br>
+      So hey, let's be friends<br>
+      I'm dying to see how this one ends<br>
+      Grab your passport and my hand<br>
+      I can make the bad guys good for a weekend"
+      <br>— Taylor Swift, <em>Blank Space</em>
+    </div>
+
+    <div class="links">
+      <a href="phase1.html">🌸 1. The Chase</a>
+      <a href="page2.html">🌼 2. More Than Friends</a>
+      <a href="page3.html">🌺 3. Our Relationship</a>
+      <a href="page4.html">🍂 4. The End</a>
+    </div>
+  </div>
+
+  <footer>Made by someone who loved her truly — for Nidhi</footer>
+
+</body>
+</html>
